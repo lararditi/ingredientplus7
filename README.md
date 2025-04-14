@@ -4,288 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>+7 by Lara Arditi</title>
-    <style>
-        body {
-            font-family: 'Minion', serif;
-            font-size: 16px;
-            color: black;
-            background-color: white;
-            margin: 0;
-            padding: 16px;
-        }
-        
-        /* Container with padding control */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            overflow-x: hidden; /* Prevent horizontal scrollbar from extending backgrounds */
-        }
-        
-        a {
-            background-color: black;
-            color: white;
-            text-decoration: underline;
-            padding: 0 3px;
-            font-size: 16px;
-            line-height: 1;
-            display: inline-block;
-        }
-        
-        p {
-            line-height: 1.6;
-        }
-        
-        .description {
-            margin-bottom: 40px;
-        }
-        
-        .edition {
-            margin-top: 60px;
-            margin-bottom: 20px;
-        }
-        
-        .edition-links {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-        
-        .edition-title, .cross-analysis {
-            margin: 0;
-            padding: 0;
-            line-height: 1;
-        }
-        
-        .id-container {
-            position: relative;
-            margin-top: 0;
-        }
-        
-        /* Create a common left edge for all elements */
-        .edition, .id-container {
-            padding-left: 0;
-        }
-        
-        /* Style for the ID elements with left extending black background */
-        .id-item {
-            margin: 0;
-            padding: 0;
-            position: relative;
-            line-height: 1;
-            white-space: nowrap;
-            margin-bottom: 0; /* No space between items */
-        }
-        
-        .id-item a {
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Black background that extends to the left */
-        .id-item:before {
-            content: "";
-            position: absolute;
-            height: 100%;
-            width: 2000px;
-            right: 100%;
-            top: 0;
-            background-color: black;
-        }
-        
-        /* Add horizontal lines after all ID items with no spacing */
-        .id-item:after {
-            content: "";
-            position: absolute;
-            height: 1px;
-            left: -2000px; /* Extend to the left */
-            right: 0;
-            bottom: 0; /* No spacing below */
-            background-color: black;
-        }
-        
-        /* Base positioning for the diagonal pattern - using classes instead of IDs */
-        .id-item:nth-child(1) { margin-left: 0; }
-        .id-item:nth-child(2) { margin-left: 70px; }
-        .id-item:nth-child(3) { margin-left: 140px; }
-        .id-item:nth-child(4) { margin-left: 210px; }
-        .id-item:nth-child(5) { margin-left: 280px; }
-        .id-item:nth-child(6) { margin-left: 350px; }
-        .id-item:nth-child(7) { margin-left: 420px; }
-        .id-item:nth-child(8) { margin-left: 490px; }
-        .id-item:nth-child(9) { margin-left: 560px; }
-        .id-item:nth-child(10) { margin-left: 630px; }
-        .id-item:nth-child(11) { margin-left: 700px; }
-        .id-item:nth-child(12) { margin-left: 770px; }
-        
-        /* Responsive adjustments */
-        @media (max-width: 992px) {
-            .id-item:nth-child(2) { margin-left: 60px; }
-            .id-item:nth-child(3) { margin-left: 120px; }
-            .id-item:nth-child(4) { margin-left: 180px; }
-            .id-item:nth-child(5) { margin-left: 240px; }
-            .id-item:nth-child(6) { margin-left: 300px; }
-            .id-item:nth-child(7) { margin-left: 360px; }
-            .id-item:nth-child(8) { margin-left: 420px; }
-            .id-item:nth-child(9) { margin-left: 480px; }
-            .id-item:nth-child(10) { margin-left: 540px; }
-            .id-item:nth-child(11) { margin-left: 600px; }
-            .id-item:nth-child(12) { margin-left: 660px; }
-        }
-        
-        @media (max-width: 768px) {
-            .id-item:nth-child(2) { margin-left: 50px; }
-            .id-item:nth-child(3) { margin-left: 100px; }
-            .id-item:nth-child(4) { margin-left: 150px; }
-            .id-item:nth-child(5) { margin-left: 200px; }
-            .id-item:nth-child(6) { margin-left: 250px; }
-            .id-item:nth-child(7) { margin-left: 300px; }
-            .id-item:nth-child(8) { margin-left: 350px; }
-            .id-item:nth-child(9) { margin-left: 400px; }
-            .id-item:nth-child(10) { margin-left: 450px; }
-            .id-item:nth-child(11) { margin-left: 500px; }
-            .id-item:nth-child(12) { margin-left: 550px; }
-        }
-        
-        @media (max-width: 480px) {
-            .id-item:nth-child(2) { margin-left: 30px; }
-            .id-item:nth-child(3) { margin-left: 60px; }
-            .id-item:nth-child(4) { margin-left: 90px; }
-            .id-item:nth-child(5) { margin-left: 120px; }
-            .id-item:nth-child(6) { margin-left: 150px; }
-            .id-item:nth-child(7) { margin-left: 180px; }
-            .id-item:nth-child(8) { margin-left: 210px; }
-            .id-item:nth-child(9) { margin-left: 240px; }
-            .id-item:nth-child(10) { margin-left: 270px; }
-            .id-item:nth-child(11) { margin-left: 300px; }
-            .id-item:nth-child(12) { margin-left: 330px; }
-        }
-    </style>
+    <link rel="stylesheet" href="cover.css">
+   
 </head>
 <body>
+    <div inst></div>
     <div class="container">
         <div class="description">
-            <p><a href="#">&lt;INGREDIENT&gt;</a>+7 is an ongoing <a href="#">&lt;THESIS&gt;</a> by <a href="#">&lt;LARA ARDITI&gt;</a> exploring the idea that language uses syntax to organize pre-existing morsels of verbal expression to create sensibility is a notion that, when applied to cooking, becomes what is commonly known as a recipe.</p>
-            
-            <p>When thinking of recipes, the expectation is for them to yield a palatable dish, but the true nature of cooking is more an accident guided by intuition. When given parameters of <a href="#">&lt;INGREDIENTS&gt;</a>, <a href="#">&lt;AUDIENCES&gt;</a>, <a href="#">&lt;PURPOSES&gt;</a>, <a href="#">&lt;SPACES&gt;</a> <a href="#">&lt;PREPARATIONS&gt;</a>, <a href="#">&lt;VESSELS&gt;</a>, <a href="#">&lt;UTENSILS&gt;</a>, people are not necessarily concerned with selecting what is good or bad but manipulating these elements to create a means a discourse, a meal.</p>
+            <p><a href="#ingredient7"><span class="tag">&lt;INGREDIENT+7&gt;</span></a> is an ongoing <a href="https://drive.google.com/drive/folders/19sis724HJrEHNFFThyc_nFx0jlxkBLF1?usp=drive_link"><span class="tag">&lt;THESIS&gt;</span></a> by <a href="https://ardil219.com/"><span class="tag">&lt;LARA ARDITI&gt;</span></a> exploring the idea that language uses syntax to organize pre-existing morsels of verbal expression to create sensibility is a notion that, when applied to cooking, becomes what is commonly known as a recipe.</p>
+
+            <p>When thinking of recipes, the expectation is for them to yield a palatable dish, but the true nature of cooking is more an accident guided by intuition. When given parameters of <a href="#ingredients"><span class="tag">&lt;INGREDIENTS&gt;</span></a>, <a href="#audiences"><span class="tag">&lt;AUDIENCES&gt;</span></a>, <a href="#purposes"><span class="tag">&lt;PURPOSES&gt;</span></a>, <a href="#spaces"><span class="tag">&lt;SPACES&gt;</span></a> <a href="#preparations"><span class="tag">&lt;PREPARATIONS&gt;</span></a>, <a href="#vessels"><span class="tag">&lt;VESSELS&gt;</span></a>, <a href="#utensils"><span class="tag">&lt;UTENSILS&gt;</span></a>, people are not necessarily concerned with selecting what is good or bad but manipulating these elements to create a means a discourse, a meal.</p>
             
             <p>This principle is reflected through four books with a stripped-down nature that use the functional aesthetics of the spreadsheet. This serves as an homage to the original function of recipe books in Medieval times when records of food were kept to show the domestic histories of the wealthy and did not make its way into the kitchen until the 19th century. This aligns with contemporary cookbooks, which have taken image-heavy, aspirational roles where they remain on coffee tables and rarely appear in kitchens. This series of hand-sized, loose-bound, word-dominated, monochromatic books use a constructed mathematical process for cooking, rather than a predetermined literary tract to free up space for conceptual thought as the basis for ideation in food.</p>
             
-            <p>Inquiries for collaborations and purchases are welcome through <a href="mailto:LARA.ARDITI@HOTMAIL.COM">&lt;LARA.ARDITI@HOTMAIL.COM&gt;</a>. If you'd like to contribute to the project, feel free to fill out the <a href="#">&lt;SURVEY&gt;</a>. Keep scrolling to access the <a href="#">&lt;RESPONSE DATABASE&gt;</a> making up the content of the printed books.</p>
+            <p>Inquiries for collaborations and purchases are welcome through <a href="mailto:LARAARDITI@GMAIL.COM"><span class="tag">&lt;LARAARDITI@GMAIL.COM&gt;</span></a>. If you'd like to contribute to the project, feel free to fill out the <a href="https://www.surveymonkey.com/r/XS3R7TK"><span class="tag">&lt;SURVEY&gt;</span></a>. Keep scrolling to access the <a href="https://drive.google.com/drive/folders/19sis724HJrEHNFFThyc_nFx0jlxkBLF1?usp=drive_link"><span class="tag">&lt;RESPONSE DATABASE&gt;</span></a> making up the content of the printed books.</p>
             
-            <p>For more text on the project see <a href="#">&lt;INTRODUCTION&gt;</a>.</p>
+            <p>For more text on the project see <a href="https://drive.google.com/drive/folders/1vhNtL2WNCzd26qPFlJ5Rz-S8OXB8BnBQ?usp=drive_link"><span class="tag">&lt;INTRODUCTION&gt;</span></a>.</p>
+            
+            <p>To see what the books look like see <a href="https://drive.google.com/drive/folders/1Kgn8Mh9xUj7cLpRaUzwVdHEfgyUOTXTO?usp=drive_link"><span class="tag">&lt;PHOTOS&gt;</span></a>.</p>
         </div>
         
         <!-- Edition 1 -->
         <div class="edition">
             <div class="edition-links">
-                <div class="edition-title"><a href="#">&lt;EDITION_1&gt;</a></div>
-                <div class="cross-analysis"><a href="#">&lt;CROSS_ANALYSIS&gt;</a></div>
+                <div class="edition-title"><span class="tag">&lt;EDITION_1&gt;</span></div>
+                <div class="cross-analysis"><span class="tag">&lt;CROSS_ANALYSIS&gt;</span></div>
             </div>
             <div class="id-container">
-                <div class="id-item"><a href="#">&lt;ID@1&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@2&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@3&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@4&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@5&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@6&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@7&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@8&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@9&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@10&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@11&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@12&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1z83pKqZBEm-pqpwF5kUd0qmCGpzDfoRm/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@1&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1ALoKJq5tIiAQl9psZ22xrDYUiQgZK8ib/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@2&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1R1dNDJ1NfbrhFZIV9uFkeydaUmEC6a5O/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@3&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1Ay-8taoMUooCdY1Rzxu7ep29fILqOOXk/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@4&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1QagamN0E33hsl_59BfxCaWgG9ITLOPYG/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@5&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1uwuIZtdT6Pe4CDZKxeqLmzDyTeVdQMKn/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@6&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1Ps1xoT_4NK15hiZ-k6Dm8MXcJ8yN7GbS/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@7&gt;</a></div>
+                <div class="id-item"><a href="">&lt;ID@8&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1kdfIks5riiG2brB7Jb1mKDAy2RDnzLms/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@9&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1FPxyCIxJ7kI3sYcZ0ldovXDLxd_ipQfW/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@10&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1qWCnp8JjRWI0kCecOCDPcmspPfFnzPhH/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@11&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1bQ_Vup3-dq7nFJDYzVcNifm49zhnZXBI/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@12&gt;</a></div>
             </div>
         </div>
         
         <!-- Edition 2 -->
         <div class="edition">
             <div class="edition-links">
-                <div class="edition-title"><a href="#">&lt;EDITION_2&gt;</a></div>
-                <div class="cross-analysis"><a href="#">&lt;CROSS_ANALYSIS&gt;</a></div>
+                <div class="edition-title"><span class="tag">&lt;EDITION_2&gt;</span></div>
+                <div class="cross-analysis"><span class="tag">&lt;CROSS_ANALYSIS&gt;</span></div>
             </div>
             <div class="id-container">
-                <div class="id-item"><a href="#">&lt;ID@1&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@2&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@3&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@4&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@5&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@6&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@7&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@8&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@9&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@10&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@11&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@12&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1BI7XJ25wHWRn9xPko3LQcXQYnnMkCKkh/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@13&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1ziwJ4r522GXV1CO7jrtNwI9o-trAFsu6/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@14&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1FlO-zK3h-FGDo_1muO_TeY-iL8kB9M_4/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@15&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/10fZEPgVhiUc-Dell9ig-ymh-WkaIGOFT/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@16&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/19HOz9KbInmFdWXJk1IVAs2Gx2x0PNbE2/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@17&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1iIXOf_caPTs62zrJzhVxAA8wMpkmjggS/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@18&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1c8Mb9RuPMQjPdMhw99SEyegNhWCAyEaJ/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@19&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1fRoel7O6LjdjEDERT4alKzIgL6touVPA/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@20&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1yREtOs9AZs6QhCrgBLZjSVH4zVCUqYbY/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@21&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1cBr7fI85hSMD0apk6s_geJXi_5CWTYCb/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@22&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1PRGv_Sjns-w7jtIS2PSRrUnlZU9Y5vaT/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@23&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1dmvD3EFMpG4_2PwGACQrTkDlnyQGBp01/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@24&gt;</a></div>
             </div>
         </div>
         
         <!-- Edition 3 -->
         <div class="edition">
             <div class="edition-links">
-                <div class="edition-title"><a href="#">&lt;EDITION_3&gt;</a></div>
-                <div class="cross-analysis"><a href="#">&lt;CROSS_ANALYSIS&gt;</a></div>
+                <div class="edition-title"><span class="tag">&lt;EDITION_3&gt;</span></div>
+                <div class="cross-analysis"><span class="tag">&lt;CROSS_ANALYSIS&gt;</span></div>
             </div>
             <div class="id-container">
-                <div class="id-item"><a href="#">&lt;ID@1&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@2&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@3&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@4&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@5&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@6&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@7&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@8&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@9&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@10&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@11&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@12&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1-F9k4n2m-Pz1p0NElbK1m_Cr1uUu_Iqw/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@25&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1iDMhr5zA9kZIC7UqW59ANGjgp_zXR0qx/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@26&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1QVDHBnZKyDvzycVjoaMnfbw__pqUYLrb/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@27&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1zdX1wkP26cX41UekHxldiTCgeDnlYwxC/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@28&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1kEI0dkq3I01HFNvAphgs8dLP75Fqr52j/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@29&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1pgDsU-w4GJk8xccDLTZ3pCPjuHK46RWC/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@30&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/14rsmS6knrCp3x9KtQlSq2YfEaxG9IAh6/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@31&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1vtOaJut8AUX4Z7zzLLIKxpScVsCutCWj/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@32&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1jOR3rCwtU56chYyFb9v4FX3rLr14A3oH/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@33&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/13RbYRrq9ph8Z0pfMBhVBotEmdajYBWJ2/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@34&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1jHYkmC4UjiGL5mgKDcKnzNeZdl0u2lGh/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@35&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1g_VZnI8Rua67g9pnb4EYxcLdiKgNxLA-/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@36&gt;</a></div>
             </div>
         </div>
         
         <!-- Edition 4 -->
         <div class="edition">
             <div class="edition-links">
-                <div class="edition-title"><a href="#">&lt;EDITION_4&gt;</a></div>
-                <div class="cross-analysis"><a href="#">&lt;CROSS_ANALYSIS&gt;</a></div>
+                <div class="edition-title"><span class="tag">&lt;EDITION_4&gt;</span></div>
+                <div class="cross-analysis"><span class="tag">&lt;CROSS_ANALYSIS&gt;</span></div>
             </div>
             <div class="id-container">
-                <div class="id-item"><a href="#">&lt;ID@1&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@2&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@3&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@4&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@5&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@6&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@7&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@8&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@9&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@10&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@11&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@12&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1DRxrhh8qOfBFYFmVXPVoEZeXGjcm08xd/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@37&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1BUMQU9G9EnjzEeCusXz4cfXfQl9YcM1N/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@38&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1pu635qm5IjrUpEzV1RqY6R-UWJNkISoY/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@39&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1l4H0zn8eLJD408EPmMe8olcwDdVEvzBK/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@40&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1IIWSKt8MpRM0x_hNRaJyS-Aj8Wo8m0cE/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@41&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/18cbLudqwZ0W91LDJ2fpv1X_HnPlSyY4T/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@42&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1pbyUQ0Dj1lbNA7NrxfoHpxz6kZAYKYTl/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@43&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1hHDUu5SkOIYDngf2WKm0FvMM_ytrG0eb/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@44&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/18QB63dkpZbcnOY9giD5Mm-EMvLlNzt09/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@45&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1HqJKEtBYwNbiwGlovrettipErC-dZWpm/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@46&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1_dYgKnyx06hBkzeFChRzQvqmkJz3XSm5/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@47&gt;</a></div>
+                <div class="id-item"><a href="https://docs.google.com/spreadsheets/d/1sTCmuy4_soWfnga6x9Z4a8AAbmTkZ5sf/edit?usp=drive_link&ouid=104357770261129718275&rtpof=true&sd=true">&lt;ID@48&gt;</a></div>
             </div>
         </div>
         
         <!-- Edition 5 -->
         <div class="edition">
             <div class="edition-links">
-                <div class="edition-title"><a href="#">&lt;EDITION_5&gt;</a></div>
-                <div class="cross-analysis"><a href="#">&lt;CROSS_ANALYSIS&gt;</a></div>
+                <div class="edition-title"><span class="tag">&lt;EDITION_5&gt;</span></div>
+                <div class="cross-analysis"><span class="tag">&lt;CROSS_ANALYSIS&gt;</span></div>
             </div>
             <div class="id-container">
-                <div class="id-item"><a href="#">&lt;ID@1&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@2&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@3&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@4&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@5&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@6&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@7&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@8&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@9&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@10&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@11&gt;</a></div>
-                <div class="id-item"><a href="#">&lt;ID@12&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@49&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@50&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@51&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@52&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@53&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@54&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@55&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@56&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@57&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@58&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@59&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@60&gt;</a></div>
             </div>
         </div>
+
+        <!-- <div class="edition">
+            <div class="edition-links">
+                <div class="edition-title"><span class="tag">&lt;EDITION_5&gt;</span></div>
+                <div class="cross-analysis"><span class="tag">&lt;CROSS_ANALYSIS&gt;</span></div>
+            </div>
+            <div class="id-container">
+                <div class="id-item"><a href="#">&lt;ID@49&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@50&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@51&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@52&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@53&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@54&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@55&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@56&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@57&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@58&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@59&gt;</a></div>
+                <div class="id-item"><a href="#">&lt;ID@60&gt;</a></div>
+            </div>
+        </div> -->
     </div>
 </body>
 </html>
