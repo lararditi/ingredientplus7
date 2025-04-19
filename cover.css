@@ -167,7 +167,7 @@ p {
     /* Adjust spacing for better diagonal appearance */
     .id-container {
         grid-template-columns: repeat(12, 1fr);
-        row-gap: 0.5em;
+/*         row-gap: 0.5em; */
         margin-bottom: 2em;
     }
     
